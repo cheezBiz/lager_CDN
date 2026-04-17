@@ -633,12 +633,15 @@ contract.events.conversationCreated({
 
 //------------------------- State view Functions -------------------------------//
 
-async function conversationCreated(conversationID) {
+async function conversationCreated() {
+  const conversationID = document.getElementById("convoID").value;
   const result = await contract.methods.conversation(conversationID).call();
   console.log(result);
 }
 
-async function conversationParticipants(conversationID, userAddress){
+async function conversationParticipants(){
+  const conversationID=document.getElementById("participantID");
+  const userAddress=document.getElementById("participantAddress");
   const result = await contract.methods.users(conversationID, userAddress).call();
   console.log(result);
 }
