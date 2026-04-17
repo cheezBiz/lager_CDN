@@ -9,9 +9,24 @@
       <table>
          <!-- state view functions -->
          <tr>
+            <!-- this is for checking if the conversation was created in the contract -->
+            <td>
+               <label for="convoCheck">Check if conversation is created</label>
+               <input type="number" id="convoID">
+               <button onclick="conversationCreated()">Check if conversation is created</button>
+            </td>
+                        
             <td>
                <button onclick="viewFees()">View Fees</button>
             </td>
+
+            <!-- this is for checking if the user is a participant -->
+            <td>
+               <input type="number" id="participantID">
+               <input type="text" id="participantAddress">
+               <button onclick="conversationParticipants()"></button>
+            </td>
+
          </tr>
       </table>
       <!-- importing libraries -->
