@@ -640,8 +640,8 @@ async function conversationCreated() {
 }
 
 async function conversationParticipants(){
-  const conversationID=document.getElementById("participantID");
-  const userAddress=document.getElementById("participantAddress");
+  const conversationID=document.getElementById("participantID").value;
+  const userAddress=document.getElementById("participantAddress").value;
   const result = await contract.methods.users(conversationID, userAddress).call();
   console.log(result);
 }
@@ -651,7 +651,8 @@ async function viewFees() {
   console.log(result);
 }
 
-async function owners(ownerAddress) {
+async function owners() {
+  const ownerAddress=document.getElementById("viewOwners").value;
   const result = await contract.methods.owners(ownerAddress).call();
   console.log(result);
 }
@@ -661,8 +662,10 @@ async function totalOwners() {
   console.log(result);
 }
 
-async function consensusState(ownerAddress) {
+async function consensusState() {
+  const ownerAddress=document.getElementById("checkConsensus").value;
   const result = await contract.methods.consensus(ownerAddress).call();
+  console.log(result);
 }
 
 async function consensusResult() {
