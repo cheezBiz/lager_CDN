@@ -89,7 +89,7 @@
         </tr>
     </table>
 
-    <!-- ===== State View Functions ===== -->
+    <!-- ===== State Write Functions ===== -->
     <table id="state_write_functions">
 
       <tr>
@@ -128,12 +128,12 @@
     <table id="owner_state_write_functions">
       <tr>
 
-         <!-- Vote -->
+
+         <!-- Vote On Consensus -->
+
+         <!-- =============================================== --> 
          <td>
             <label>Upvote on Consensus</label><br>
-            <!--client side check required here, also pass a bool
-            and not a string to RPC -->
-            <input type="text" id="upVote">
             <button onclick="upVoteConsensus()">
                upVote
             </button>
@@ -141,13 +141,28 @@
 
          <td>
             <label>downVote on Consensus</label><br>
-            <!--client side check required here, also pass a bool
-            and not a string to RPC -->
-            <input type="text" id="downVote">
             <button onclick="downVoteConsensus()">
                downVote
             </button>
          </td>
+
+         <!-- =============================================== -->
+
+         <!-- Vote on Adding an Owner-->
+         <td>
+            <label>Address of Owner</label>
+            <input type="text" id="agreeOnAddition">
+            <button onclick="AgreeOnAdding_Leader()">Vote On Adding</button>
+         </td>
+
+         <!-- Vote on Removing an Owner-->
+         <td>
+            <label>Address Of Owner</label>
+            <input type="text" id="disagreeOnAddition">
+            <button onclick="DisagreeOnAdding_Leader()">Vote on Removing</button>
+         </td>
+
+         <!-- =============================================== -->
 
          <!-- Add Owner -->
          <td>
